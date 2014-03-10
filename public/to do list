@@ -1,0 +1,6 @@
+AJAX - when user clicks on add link on item - create record in stars area
+AJAX - when user tipstars another user - create record in stars area
+Users can upload images and save to S3
+Items images are copied and saved to S3
+Create watchlist functionality
+

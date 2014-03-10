@@ -1,0 +1,33 @@
+<h1>Listing stars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipstar</th>
+      <th>Dog</th>
+      <th>User</th>
+      <th>Item</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stars.each do |star| %>
+      <tr>
+        <td><%= star.tipstar %></td>
+        <td><%= star.dog %></td>
+        <td><%= star.user_id %></td>
+        <td><%= star.item_id %></td>
+        <td><%= link_to 'Show', star %></td>
+        <td><%= link_to 'Edit', edit_star_path(star) %></td>
+        <td><%= link_to 'Destroy', star, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Star', new_star_path %>

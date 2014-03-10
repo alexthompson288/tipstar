@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipstar:</strong>
+  <%= @star.tipstar %>
+</p>
+
+<p>
+  <strong>Dog:</strong>
+  <%= @star.dog %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @star.user_id %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @star.item_id %>
+</p>
+
+<%= link_to 'Edit', edit_star_path(@star) %> |
+<%= link_to 'Back', stars_path %>
