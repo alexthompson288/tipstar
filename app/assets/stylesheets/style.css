@@ -107,6 +107,17 @@ img{
 	color:white;
 }
 
+.btn-half-screen, .btn-third-screen{
+	padding: 5px 10px;
+	text-align: center;
+	background-color: #da4144;
+	color: black;
+}
+
+.btn-half-screen:hover, btn-third-screen:hover{
+	color:white;
+}
+
 .alert{
 	padding: 0px;
 }
@@ -127,4 +138,22 @@ img{
 
 .list-view h3{
 	margin: 0px;
+}
+
+.tipstar-star{
+	background: url('../assets/star.png') no-repeat;
+	padding: 0px 40px;
+}
+
+.nav-choice-menu li{
+	list-style: none;
+	width: 100%;
+	text-align: center;
+	background-color: rgba(218,65,68,0.7);
+	margin: 10px 0px;
+	padding: 10px;
+}
+
+a{
+	color: black;
 }

@@ -4,7 +4,11 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.order("tipstars DESC")
+    @items.each do |item|
+      stars = item.stars.count
+      item.update_attributes tipstars: stars
+    end
   end
 
   # GET /items/1

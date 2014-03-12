@@ -1,13 +1,14 @@
-<h1>Listing items</h1>
-
+<h1>Films</h1>
+<hr />
 <div class="list-view">
   <% @items.each do |item| %>
     <div class="row">
       <div class="col-xs-8">
         <h3><%= item.name %></h3>
       </div>
-      <div class="col-xs-4">
-        <p>Tipstars <%= item.tipstars %></p>
+      <div class="col-xs-4 tipstar-star">
+        
+        <p class="tipstar-star-number"><%= item.tipstars %></p>
       </div>
       <div class="clear"></div>
       <div class="col-xs-4">
@@ -19,13 +20,29 @@
         <%= item.description %>
       </div>
       <div class="clear"></div>
+    
       <br />
       <div class="col-xs-4">
-        <a href="#" class="btn-small">Add</a>
+        <a href="#" class=""><p class="btn-third-screen">It's a dog</p></a>
       </div>
       <div class="col-xs-4">
-        <a href="#" class="btn-small">Tipstar</a>
+        <a href="#" class=""><p class="btn-third-screen">Watchlist</p></a>
       </div>
+      <% if item.stars.any? %>
+        <% item.stars.each do |star| %>
+          <% if star.user_id === current_user.id %>
+            <div class="col-xs-4">
+              <a href="#" class=""><p class="btn-third-screen">Remove</p></a>
+            </div>
+          <% end %>
+
+        <% end %>
+      <% else %>
+        <div class="col-xs-4">
+          <a href="#" class=""><p class="btn-third-screen">Tipstar</p></a>
+        </div>
+      <% end %>
+      
     </div>
     <hr />
   <% end %>

@@ -2,14 +2,14 @@
 <div class="nav-choice-menu">
 	<ul>
 		<li><%= link_to 'What\'s new', whatsnew_path %></li>
-		<li><%= link_to 'Search', search_path %></li>
-		<li><%= link_to 'People', people_path %></li>
+		<li><%= link_to 'Search', find_path %></li>
+		<li><%= link_to 'People', users_path %></li>
 		<li><%= link_to 'Items', items_path %></li>
 		<% if current_user %>
 		<li><%= link_to 'My page', mypage_path(current_user) %></li>
 		<% end %>
 		<% if user_signed_in? %>
-			<li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+			<li><%= link_to "Logout of " + current_user.name, destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
 		<% else %>
 		<li><%= link_to 'Login', new_user_session_path %></li>
 		<li><%= link_to 'Sign up', new_user_registration_path %></li>

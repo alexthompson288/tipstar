@@ -12,6 +12,8 @@ Tipstar::Application.routes.draw do
   get "pages/home"
   get "pages/about"
   get '/search', :to => 'search#index', :as => 'search'
+  get '/find', :to => 'pages#home', :as => 'find'
+
   get '/people', :to => 'pages#people', :as => 'people'
   get '/navigation', :to => 'pages#navigation', :as => 'navigation'
   get '/whatsnew', :to => 'pages#whatsnew', :as => 'whatsnew'
@@ -22,7 +24,7 @@ Tipstar::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'pages#home'
+   root 'items#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -17,14 +17,14 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: tipstar_development
+  database: tipstar_development_1
   pool: 5
  
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  #host: localhost
+  host: localhost
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
@@ -45,15 +45,14 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: tipstar_test
+  database: tipstar_test_1
+  host: localhost
   pool: 5
-  username: tipstar
-  password:
+  
 
 production:
   adapter: postgresql
   encoding: unicode
   database: tipstar_production
   pool: 5
-  username: tipstar
-  password:
+  
